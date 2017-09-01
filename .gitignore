@@ -1,0 +1,5 @@
+#misc. vim files
+*~
+
+#compiled python
+*.pyc
