@@ -12,6 +12,7 @@ class SpaceAge(object):
 
     def __init__(self,seconds):
         self.seconds = seconds
+        
     
     def __getattr__(self,name):
         if name[:3] == 'on_' and name[3:] in self.planet_years:
@@ -19,4 +20,5 @@ class SpaceAge(object):
                 return round(self.seconds/self.planet_years[name[3:]],2)
             return f
         else:
-            raise AttributeError
+            raise AttributeError("type object 'SpaceAge' has no attribute '%s'" % name) 
+
