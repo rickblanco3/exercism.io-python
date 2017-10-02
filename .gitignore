@@ -8,3 +8,4 @@
 #Eclipse files
 .project
 .pydevproject
+__pycache__/
