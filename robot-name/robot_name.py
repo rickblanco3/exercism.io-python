@@ -10,13 +10,14 @@ class Robot(object):
     def __init__(self):
         ''' assigns a name for this robot
             for the first time .         '''
-        self.reset()
+        self._name = Robot.generate_name()
 
     @staticmethod
     def generate_name():
         '''generates a valid robot name'''
         random.seed()
-        return ''.join([string.ascii_uppercase[random.randint(0, 25)] for i in range(2)]) + \
+        return ''.join([string.ascii_uppercase[random.randint(0, 25)] \
+            for i in range(2)]) + \
                 ''.join([str(random.randint(0, 9)) for i in range(3)])
 
     def reset(self):
