@@ -4,3 +4,8 @@
 
 #compiled python
 *.pyc
+
+#Eclipse files
+.project
+.pydevproject
+__pycache__/
